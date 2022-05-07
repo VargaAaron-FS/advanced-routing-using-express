@@ -2,29 +2,32 @@ const express = require("express");
 const app = express();
 
 // GET / HTTP/1.1 (Retrieving info)
-app.get("/", (request, response) => {
-  response.send("Home Page! GET");
-});
+// app.get("/", (request, response) => {
+//   response.send("Home Page! GET");
+// });
 
 // POST / HTTP/1.1 (Sending info)
-app.post("/", (request, response) => {
-  response.send("Home Page! POST");
-});
+// app.post("/", (request, response) => {
+//   response.send("Home Page! POST");
+// });
 
 // GET /products/all HTTP/1.1
-// app.get("/products/all", (request, response) => {
-//   console.log(request.query.pageNum);
-//   console.log(request.query.sortBy);
-//   console.log(request.query.orderBy);
-//   response.send(
-//     "Products - Page number: " +
-//       request.query.pageNum +
-//       ", Sort by: " +
-//       request.query.sortBy +
-//       ", Order by: " +
-//       request.query.orderBy
-//   );
-// });
+// Page: 2
+// Sort: price
+// Order: desc
+app.get("/products/all", (request, response) => {
+  request.headers.pageNum;
+  request.headers.sortBy;
+  request.headers.orderBy;
+  response.send(
+    "Products - Page number: " +
+      request.headers.pageNum +
+      ", Sort by: " +
+      request.headers.sortBy +
+      ", Order by: " +
+      request.headers.orderBy
+  );
+});
 
 // GET /products/all?sort=price HTTP/1.1
 app.get("/products/all", (request, response) => {
