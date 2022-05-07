@@ -5,16 +5,17 @@ const app = express();
 // Page: 2
 // Sort: price
 // Order: desc
-// app.get("/products/all", (request, response) => {
-//   response.send(
-//     "Products - Page number: " +
-//       request.headers.pageNum +
-//       ", Sort by: " +
-//       request.headers.sortBy +
-//       ", Order by: " +
-//       request.headers.orderBy
-//   );
-// });
+app.get("/products/all", (request, response) => {
+  request.headers;
+  response.send(
+    "Products - Page number: " +
+      response.headers.pageNum +
+      ", Sort by: " +
+      response.headers.sortBy +
+      ", Order by: " +
+      response.headers.orderBy
+  );
+});
 
 // GET /products/all?sort=price HTTP/1.1
 app.get("/products/all", (request, response) => {
