@@ -1,5 +1,10 @@
 html
-  head
-    title= title
-  body
-    h1= message
+    head
+        title= title
+    body
+        h1= message
+        ul(style='list-style: none')
+            each item in users
+                li= 'name: ' + item.name
+                    li(style="border-bottom: 2px solid black")= 'email: ' + item.email
+                    <br />
