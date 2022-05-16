@@ -4,7 +4,7 @@
   "description": "Advanced routing with Express JS",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon -e js,pug index.js",
+    "watch": "nodemon -e js,twig index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
