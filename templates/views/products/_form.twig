@@ -11,6 +11,10 @@
 		<input id="slug" type="text" name="slug" value="{{ product.slug }}" />
 	</div>
 	<div>
+		<label for="price">Product Price:</label>
+		<input id="price" type="number" step=".01" name="price" value="{{ product.price }}" />
+	</div>
+	<div>
 		<button type="submit" style="padding: .5rem 1rem; font-weight: 700; cursor: pointer;">Save Product</button>
 	</div>
 </form>

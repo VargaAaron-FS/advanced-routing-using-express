@@ -1,8 +1,8 @@
 let products = [
-    { id: "1", slug: "nike-shoe", title: "Nike Shoe" },
-    { id: "2", slug: "adidas-shoe", title: "Adidas Shoe" },
-    { id: "3", slug: "jordans-shoe", title: "Jordans Shoe" },
-    { id: "4", slug: "reebok-shoe", title: "Reebok Shoe" }
+    { id: "1", slug: "nike-shoe", title: "Nike Shoe", price: "99.99" },
+    { id: "2", slug: "adidas-shoe", title: "Adidas Shoe", price: "99.99" },
+    { id: "3", slug: "jordans-shoe", title: "Jordans Shoe", price: "99.99"},
+    { id: "4", slug: "reebok-shoe", title: "Reebok Shoe", price: "99.99" }
 ];
 
 const all = () => {
