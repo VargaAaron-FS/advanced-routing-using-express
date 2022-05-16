@@ -4,6 +4,7 @@
   "description": "Advanced routing with Express JS",
   "main": "index.js",
   "scripts": {
+    "watch": "nodemon -e js,twig index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,10 @@
   "homepage": "https://github.com/VargaAaron-FS/advanced-routing-using-express#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "twig": "^1.15.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
