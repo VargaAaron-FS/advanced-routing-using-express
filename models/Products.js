@@ -9,8 +9,10 @@ const find = (id) => {
 };
 
 const create = (product) => {
+  const id = Number(products[products.length - 1].id) + 1 + "";
+  products.push({ id, ...product });
   products.push(product);
-  return products;
+  return products[products.length - 1];
 };
 
 const update = (id, product) => {
