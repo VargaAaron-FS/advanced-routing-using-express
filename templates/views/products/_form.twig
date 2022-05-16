@@ -1,4 +1,4 @@
-<form method="POST" action="/products{% if product.id %}/{{ product.id }}{% endif %}">
+<form method="POST" action="/products{% if product.id %}/{{ product.id }}{% endif %}" style="display: flex; flex-direction: column; row-gap: 1rem;">
 	{% if product.id %}
 		<input type="hidden" name="id" value="{{ product.id }}" />
 	{% endif %}
@@ -11,6 +11,6 @@
 		<input id="slug" type="text" name="slug" value="{{ product.slug }}" />
 	</div>
 	<div>
-		<button type="submit">Save Product</button>
+		<button type="submit" style="padding: .5rem 1rem; font-weight: 700; cursor: pointer;">Save Product</button>
 	</div>
 </form>

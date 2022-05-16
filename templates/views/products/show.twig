@@ -2,14 +2,14 @@
 
 {% block main_content %}
 	<h2>About {{ product.title }}</h2>
-	<ul>
+	<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; row-gap: 1rem; margin-bottom: 1.5rem;">
 		<li>
-			<label>Title: </label> {{ product.title }}
+			<label style="font-weight: bold;">Title: </label> {{ product.title }}
 		</li>
 		<li>
-			<label>Slug: </label> {{ product.slug }}
+			<label style="font-weight: bold;">Slug: </label> {{ product.slug }}
 		</li>
 	</ul>
-	<a href="/products/{{ product.id }}/edit">Edit Product</a>
-	<a href="/products/{{ product.id }}/delete">Delete Product</a>
+	<a href="/products/{{ product.id }}/edit" style="color: blue; border: 2px solid blue; padding: .5rem 1rem; border-radius: .25rem;">Edit Product</a>
+	<a href="/products/{{ product.id }}/delete" style="color: red; border: 2px solid red; padding: .5rem 1rem; border-radius: .25rem;">Delete Product</a>
 {% endblock %}
