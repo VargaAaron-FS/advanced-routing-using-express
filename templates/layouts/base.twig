@@ -5,17 +5,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ASL Project - {% block title %}Home{% endblock %}</title>
+    {# I have tried several different methods for properly applying/linking a stylesheet to my base.twig file with no success, lolz... 😭 #}
     <style>
         body {
             font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color:  blue;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            column-gap: 2rem;
+        }
+        main li {
+            margin-top:  1rem;
+        }
+        header {
+            border-bottom: 2px solid #aaa;
+            padding: 1rem;
+            background: #eee;
+        }
+        header a {
+            font-weight: 700;
+            font-size: 1rem;
+            color: black
+        }
+        main {
+            padding:  2rem 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+        h2 {
+            margin:  0;
+            padding:  0;
+        }
+        footer {
+            border-top: 2px solid #aaa;
+            padding: 1rem;
+            background: #eee;
         }
     </style>
 </head>
 
 <body>
     {% include '../partials/_header.twig' %}
-    {% block main_content %}
-    {% endblock %}
+    <main>
+        {% block main_content %}
+        {% endblock %}
+    </main>
     {% include '../partials/_footer.twig' %}
 </body>
 
