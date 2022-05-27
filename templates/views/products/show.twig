@@ -1,7 +1,6 @@
 {% extends 'layouts/base.twig' %}
 
 {% block main_content %}
-	<a href="/products" style="margin-bottom: 2rem;">Back to Products</a>
 	<h2>About {{ product.title }}</h2>
 	<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; row-gap: 1rem; margin-bottom: 1.5rem;">
 		<li>
@@ -14,8 +13,6 @@
 			<label style="font-weight: bold;">Price: </label> ${{ product.price }}
 		</li>
 	</ul>
-	<div style="display: flex; flex-direction: row; column-gap: .5rem">
-		<a href="/products/{{ product.id }}/edit" style="color: blue; border: 2px solid blue; padding: .5rem 1rem; border-radius: .25rem;">Edit Product</a>
-		<a href="/products/{{ product.id }}/delete" style="color: red; border: 2px solid red; padding: .5rem 1rem; border-radius: .25rem;">Delete Product</a>
-	</div>
+	<a href="/products/{{ product.id }}/edit" style="color: blue; border: 2px solid blue; padding: .5rem 1rem; border-radius: .25rem;">Edit Product</a>
+	<a href="/products/{{ product.id }}/delete" style="color: red; border: 2px solid red; padding: .5rem 1rem; border-radius: .25rem;">Delete Product</a>
 {% endblock %}

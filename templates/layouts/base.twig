@@ -8,61 +8,14 @@
     <style>
         body {
             font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            min-height: 100vh;
-        }
-        a {
-            color:  blue;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            column-gap: 2rem;
-        }
-        main li {
-            margin-top:  1rem;
-        }
-        header {
-            border-bottom: 2px solid #aaa;
-            padding: 1rem;
-            background: #eee;
-        }
-        header a {
-            font-weight: 700;
-            font-size: 1rem;
-            color: black
-        }
-        main {
-            padding:  2rem 1rem;
-            display: flex;
-            flex-direction: column;
-        }
-        h2 {
-            margin:  0;
-            padding:  0;
-        }
-        footer {
-            border-top: 2px solid #aaa;
-            padding: 1rem;
-            background: #eee;
-        }
-        form {
-            margin-top: 1rem;
         }
     </style>
 </head>
 
 <body>
     {% include '../partials/_header.twig' %}
-    <main>
-        {% block main_content %}
-        {% endblock %}
-    </main>
+    {% block main_content %}
+    {% endblock %}
     {% include '../partials/_footer.twig' %}
 </body>
 

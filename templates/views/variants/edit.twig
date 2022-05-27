@@ -1,8 +1,0 @@
-{% extends 'layouts/base.twig' %}
-
-{% block main_content %}
-	<h2>Edit Product</h2>
-	{% include 'views/variants/_form.twig' with { 'variants': variants, 'products': products } %}
-{% endblock %}
-
-{% block title %}Edit Product{% endblock %}
