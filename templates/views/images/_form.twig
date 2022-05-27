@@ -1,0 +1,25 @@
+<form method="POST" action="/images{% if image.id %}/{{ image.id }}{% endif %}" style="display: flex; flex-direction: column; row-gap: 1rem;">
+	{% if image.id %}
+		<input type="hidden" name="id" value="{{ image.id }}" />
+	{% endif %}
+	<div>
+		<label for="title">Image Id:</label>
+		<input type="text" name="title" id="title" value="{{ image.id }}" />
+	</div>
+	<div>
+		<label for="slug">Image Slug:</label>
+		<input id="slug" type="text" name="slug" value="{{ image.slug }}" />
+	</div>
+	<div>
+		<label for="variantId">Variant:</label>
+		<select name="variantId" id="variantId">
+		{% for variant in variants %}
+			<option value="{{ variant.id }}">{{ variant.title }}</option>
+		{% endfor %}
+		</select>
+	</div>
+	<div>
+		<button type="submit" style="padding: .5rem 1rem; font-weight: 700; cursor: pointer;">Save Image</button>
+		<a href="/images" style="margin-bottom: 2rem; margin-left: 1rem; color: #333;">Cancel</a>
+	</div>
+</form>

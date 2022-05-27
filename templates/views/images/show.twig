@@ -1,0 +1,21 @@
+{% extends 'layouts/base.twig' %}
+
+{% block main_content %}
+	<a href="/images" style="margin-bottom: 2rem;">Back to Images</a>
+	<h2>About Image #{{ image.id }}</h2>
+	<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; row-gap: 1rem; margin-bottom: 1.5rem;">
+		<li>
+			<label style="font-weight: bold;">Id: </label> {{ image.id }}
+		</li>
+		<li>
+			<label style="font-weight: bold;">Slug: </label> {{ image.slug }}
+		</li>
+		<li>
+			<label style="font-weight: bold;">Assigned Variant: </label> {{ variant.title }}
+		</li>
+	</ul>
+	<div style="display: flex; flex-direction: row; column-gap: .5rem">
+		<a href="/images/{{ image.id }}/edit" style="color: blue; border: 2px solid blue; padding: .5rem 1rem; border-radius: .25rem;">Edit Image</a>
+		<a href="/images/{{ image.id }}/delete" style="color: red; border: 2px solid red; padding: .5rem 1rem; border-radius: .25rem;">Delete Image</a>
+	</div>
+{% endblock %}
