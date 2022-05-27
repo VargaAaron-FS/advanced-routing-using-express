@@ -33,7 +33,7 @@ const update = async (req, res) => {
 }
 
 const remove = async (req, res) => {
-    const products = await Product.destroy({ where: { id: req.params.id }})
+    const products = await Product.destroy({ where: { id: req.params.id } })
     res.redirect('/products')
 }
 
