@@ -1,0 +1,7 @@
+{% extends 'layouts/base.twig' %}
+
+{% block main_content %}
+	<h2>Create New Variant</h2>
+	{% include 'views/variants/_form.twig' with { 'products': products } %}
+{% endblock %}
+{% block title %}Create Product{% endblock %}

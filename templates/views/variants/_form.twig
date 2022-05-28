@@ -1,0 +1,36 @@
+<form method="POST" action="/variants{% if variant.id %}/{{ variant.id }}{% endif %}" style="display: flex; flex-direction: column; row-gap: 1rem;">
+	{% if variant.id %}
+		<input type="hidden" name="id" value="{{ variant.id }}" />
+	{% endif %}
+	<div>
+		<label for="title">Title:</label>
+		<input type="text" name="title" id="title" value="{{ variant.title }}" />
+	</div>
+	<div>
+		<label for="slug">Slug:</label>
+		<input type="text" name="slug" id="slug" value="{{ variant.slug }}" />
+	</div>
+	<div>
+		<label for="description">Description:</label>
+		<textarea name="description" id="description" value="{{ variant.description }}" {% if product.id == variant.productId %}{% endif %}>{{ variant.description }}</textarea>
+	</div>
+	<div>
+		<label for="price">Price:</label>
+		<input type="text" name="price" id="price" value="{{ variant.price }}" />
+	</div>
+	<div>
+		<label for="inventory">Inventory:</label>
+		<input type="number" name="inventory" id="inventory" value="{{ variant.inventory }}" />
+	</div>
+	<div>
+		<label for="productId">Product:</label>
+		<select name="productId" id="">
+			{% for product in products %}
+				<option value="{{ product.id }}" {% if product.id == variant.productId %}selected="selected"{% endif %}>{{ product.title }}</option>
+			{% endfor %}
+		</select>
+	</div>
+	<div>
+		<button type="submit" style="padding: .5rem 1rem; font-weight: 700; cursor: pointer;">Save Variant</button>
+	</div>
+</form>

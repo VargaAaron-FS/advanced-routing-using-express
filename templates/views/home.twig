@@ -1,14 +1,20 @@
 {% extends "layouts/base.twig" %}
+
 {% block main_content %}
-<h2>Home Page</h2>
-<ul style="list-style: none; padding: 0; margin: 0;">
+<h2>Manage</h2>
+<nav>
+    <ul style="list-style: none; padding: 0; margin: 0;">
     <li>
-        <a href="/products" style="color: blue;">View Products</a>
+        <a href="/products" style="color: blue;">Products</a>
+    </li>
+    <li>
+        <a href="/variants" style="color: blue;">Variants</a>
+    </li>
+    <li>
+        <a href="/images" style="color: blue;">Images</a>
     </li>
 </ul>
+</nav>
 {% endblock %}
-{% block scripts %}
-<p>Scripts are loaded!</p>
-<script type="text/javascript"></script>
-{% endblock %}
+
 {% block title %}Home View{% endblock %}
