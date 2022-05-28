@@ -4,13 +4,22 @@
 	<h2>About {{ variant.title }}</h2>
 	<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; row-gap: 1rem; margin-bottom: 1.5rem;">
 		<li>
-			<label style="font-weight: bold;">Id: </label> {{ variant.id }}
-		</li>
-		<li>
 			<label style="font-weight: bold;">Title: </label> {{ variant.title }}
 		</li>
 		<li>
-			<label style="font-weight: bold;">Product: </label> {{ product.title }}
+			<label style="font-weight: bold;">Slug: </label> {{ variant.slug }}
+		</li>
+		<li>
+			<label style="font-weight: bold;">Description: </label> {{ variant.description }}
+		</li>
+		<li>
+			<label style="font-weight: bold;">Price: </label> {{ variant.price }}
+		</li>
+		<li>
+			<label style="font-weight: bold;">Inventory: </label> {{ variant.inventory }}
+		</li>
+		<li>
+			<label style="font-weight: bold;">Product Id: </label> {{ variant.productId }}
 		</li>
 	</ul>
 	<a href="/variants/{{ variant.id }}/edit" style="color: blue; border: 2px solid blue; padding: .5rem 1rem; border-radius: .25rem;">Edit Product</a>

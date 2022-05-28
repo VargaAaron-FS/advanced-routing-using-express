@@ -7,6 +7,22 @@
 		<input type="text" name="title" id="title" value="{{ variant.title }}" />
 	</div>
 	<div>
+		<label for="slug">Slug:</label>
+		<input type="text" name="slug" id="slug" value="{{ variant.slug }}" />
+	</div>
+	<div>
+		<label for="description">Description:</label>
+		<textarea name="description" id="description" value="{{ variant.description }}" {% if product.id == variant.productId %}{% endif %}>{{ variant.description }}</textarea>
+	</div>
+	<div>
+		<label for="price">Price:</label>
+		<input type="text" name="price" id="price" value="{{ variant.price }}" />
+	</div>
+	<div>
+		<label for="inventory">Inventory:</label>
+		<input type="number" name="inventory" id="inventory" value="{{ variant.inventory }}" />
+	</div>
+	<div>
 		<label for="productId">Product:</label>
 		<select name="productId" id="">
 			{% for product in products %}

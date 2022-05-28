@@ -4,10 +4,7 @@
 	<h2>About Image #{{ image.id }}</h2>
 	<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; row-gap: 1rem; margin-bottom: 1.5rem;">
 		<li>
-			<label style="font-weight: bold;">Id: </label> {{ image.id }}
-		</li>
-		<li>
-			<label style="font-weight: bold;">Assigned Variant: </label> {{ variant.title }}
+			<label style="font-weight: bold;">Variant Id: </label> {{ image.id }}
 		</li>
 	</ul>
 	<a href="/images/{{ image.id }}/edit" style="color: blue; border: 2px solid blue; padding: .5rem 1rem; border-radius: .25rem;">Edit Image</a>

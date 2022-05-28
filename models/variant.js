@@ -17,7 +17,10 @@ module.exports = (sequelize, DataTypes) => {
   }
   Variant.init({
     title: DataTypes.STRING,
+    slug: DataTypes.STRING,
+    description: DataTypes.TEXT('long'),
     price: DataTypes.FLOAT,
+    inventory: DataTypes.INTEGER,
     productId: DataTypes.INTEGER
   }, {
     sequelize,
