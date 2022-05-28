@@ -7,7 +7,16 @@
 			<label style="font-weight: bold;">Title: </label> {{ product.title }}
 		</li>
 		<li>
+			<label style="font-weight: bold;">Slug: </label> {{ product.slug }}
+		</li>
+		<li>
+			<label style="font-weight: bold;">Description: </label> {{ product.description }}
+		</li>
+		<li>
 			<label style="font-weight: bold;">Price: </label> ${{ product.price }}
+		</li>
+		<li>
+			<label style="font-weight: bold;">Status: </label> {% if product.is_published == true %}Active{% endif %}{% if product.is_published != true %}Inactive{% endif %}
 		</li>
 	</ul>
 	<a href="/products/{{ product.id }}/edit" style="color: blue; border: 2px solid blue; padding: .5rem 1rem; border-radius: .25rem;">Edit Product</a>
