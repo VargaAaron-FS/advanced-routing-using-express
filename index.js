@@ -16,4 +16,6 @@ app.use("/products", productRouter);
 app.use("/variants", variantsRouter);
 app.use("/images", imagesRouter);
 
+app.use("/public", express.static('public'))
+
 app.listen(3000);
