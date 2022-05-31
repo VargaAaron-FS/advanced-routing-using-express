@@ -21,22 +21,28 @@ const show = async (req, res) => {
     res.render('views/images/show', { image, variant });
 };
 
-const create = async (req, res) => {
-    const image = await Image.create(req.body);
-    res.redirect('/images/' + image.id);
+const create = async (req, res, next) => {
+    const image = await Image.create(req.body)
+    // Sets a pretext "imageId" for our upload middleware
+    req.imageId = image.id
+    // Invoke our upload middleware with next()
+    next()
+    res.redirect('/images/' + image.id)
 };
 
-const update = async (req, res) => {
+const update = async (req, res, next) => {
     const image = await Image.update(req.body, {
-        where: {
-            id: req.params.id
-        }
-    });
-    res.redirect('/images/' + req.params.id);
+        where: { id: req.params.id }
+    })
+    // Sets a pretext "imageId" for our upload middleware
+    req.imageId = req.params.id
+    // Invoke our upload middleware with next()
+    next()
+    res.redirect('/images/' + req.params.id)
 };
 
 const remove = async (req, res) => {
-    const image = await Image.destroy({ where: { id: req.params.id }});
+    const image = await Image.destroy({ where: { id: req.params.id } });
     res.redirect('/images');
 };
 
